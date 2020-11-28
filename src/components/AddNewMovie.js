@@ -4,6 +4,7 @@ import { Card, Modal, Form ,Input, } from 'antd';
 
 const AddNewMovie = ({addMovie}) => {
     const [visible , setVisible] =useState(false);
+
     const [title , setTitle] =useState();
     const [description, setDescription] =useState();
     const [posterUrl , setPosterUrl] =useState();
@@ -17,6 +18,7 @@ const AddNewMovie = ({addMovie}) => {
     const handleOk = () => {
        addMovie({
          id: Date.now() ,
+         title : title ,
          description : description,
          posterUrl : posterUrl ,
          rate : rate,
@@ -46,16 +48,16 @@ const AddNewMovie = ({addMovie}) => {
 
    <Form name="basic" {...layout}>
      <Form.Item label ="Title">
-       <Input onChange={(e) =>setTitle(e.target.value)} name="title" />
+       <Input value={title} onChange={(e) =>setTitle(e.target.value)} name="title" />
      </Form.Item>
      <Form.Item label ="Description">
-       <Input onChange={(e) =>setDescription(e.target.value)} name="description" />
+       <Input value={description} onChange={(e) =>setDescription(e.target.value)} name="description" />
      </Form.Item>
      <Form.Item label ="Poster Url">
-       <Input onChange={(e) =>setPosterUrl(e.target.value)} name="posterUrl" />
+       <Input value={posterUrl} onChange={(e) =>setPosterUrl(e.target.value)} name="posterUrl" />
      </Form.Item>
      <Form.Item label ="Rate">
-       <Input onChange={(e) =>setRate(e.target.value)} name="rate" />
+       <Input value={rate} onChange={(e) =>setRate(e.target.value)} name="rate" />
      </Form.Item>
    </Form>
  </Modal>

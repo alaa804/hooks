@@ -47,10 +47,11 @@ function App() {
   const changeRate = (newRate )=>setRate(newRate);
 
   const [movieList , setMovieList] =useState(movies);
-  const addMovie = newMovie => setMovieList([...movielist , newMovie]);
+  const addMovie = newMovie => setMovieList([...movieList , newMovie]);
 
   return (
     <div className="App">
+      
       <Search 
       rate={rate} 
       changeRate={changeRate} 
@@ -58,7 +59,7 @@ function App() {
      <MovieList movies ={
        searchTitle ? movieList.filter((el) => el.title.toLowerCase().includes(searchTitle.toLowerCase()))
        : rate > 0 
-       ? movieList.filter((el) => el.rate >= rate)
+       ? movieList.filter((el) => el.rate == rate)
        : movieList
     } 
     />
