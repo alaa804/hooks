@@ -1,38 +1,32 @@
 .App {
   text-align: center;
+  background-color: #0b657e;
+  background-image: url("img/alaa (2).jpg");
+}
+.App input  {
+  border-radius : 50px ;
+  margin : 8px;
+  border : 2px solid rgb(39, 22, 22);
+  box-sizing: border-box;
+  margin : 8px auto ;
+  width:20%;
+  outline: none;
+  padding: 4px;
+  transition : 10px;
+
+}
+.App input:focus {
+  border-color: rgb(61, 6, 6);
+  box-shadow: 0 0 8px 0 black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  color: blue;
+  font-family: fantasy;
+  font-size: medium;
+}
+.App :hover .title {
+  color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
