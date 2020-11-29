@@ -59,7 +59,7 @@ function App() {
      <MovieList movies ={
        searchTitle ? movieList.filter((el) => el.title.toLowerCase().includes(searchTitle.toLowerCase()))
        : rate > 0 
-       ? movieList.filter((el) => el.rate == rate)
+       ? movieList.filter((el) => el.rate === rate)
        : movieList
     } 
     />
