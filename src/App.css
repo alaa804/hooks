@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: #0b657e;
-  background-image: url("img/alaa (2).jpg");
+  background-image: url("img/bg.jpg");
 }
 .App input  {
   border-radius : 50px ;
@@ -28,5 +28,4 @@
 .App :hover .title {
   color: red;
 }
-
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import addBtn from '../img/Add.jpg' ;
-import { Card, Modal, Form ,Input, } from 'antd';
+import addBtn from "../img/Add.jpg" ;
+import { Card, Modal, Form ,Input, } from "antd";
 
 const AddNewMovie = ({addMovie}) => {
     const [visible , setVisible] =useState(false);
